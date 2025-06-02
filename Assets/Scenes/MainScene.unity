@@ -267,12 +267,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431400732}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0616b3004e9f2474bb31fddc1e15dd2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 500
+  gridSize: 300
   cellSize: 0.1
   lineMaterial: {fileID: 2100000, guid: 39eb558274c802c4fbcfce2cd966837b, type: 2}
   lineColor: {r: 1, g: 1, b: 1, a: 1}
@@ -555,7 +555,7 @@ MonoBehaviour:
   _target: {fileID: 689933141}
   _camera: {fileID: 963194228}
   _followSpeed: 50
-  _sensitivity: 2000
+  _sensitivity: 1000
   _minDistance: 3
   _maxDistance: 20
   _smoothness: 1000

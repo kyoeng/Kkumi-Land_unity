@@ -43,7 +43,7 @@ public class CameraTargetMovement : MonoBehaviour
                 cameraF.y = 0;
                 cameraR.y = 0;
 
-                transform.position -= (cameraR * delta.x + cameraF * delta.y) * 0.03f;
+                transform.position -= (cameraR * delta.x + cameraF * delta.y) * 0.015f;
                 _lastMousePosition = currentMousePosition;
             }
         }

@@ -11,6 +11,8 @@ public class GridDrawer : MonoBehaviour
     public Material lineMaterial;
     public Color lineColor = Color.white;
 
+    private List<GameObject> _gridList = new List<GameObject>();
+
 
 
 
@@ -32,8 +34,7 @@ public class GridDrawer : MonoBehaviour
     // 웹 제어용 그리드 On/Off 메서드
     public void GridOnOff(string msg)
     {
-        if (msg == "on") enabled = true;
-        else enabled = false;
+        ChangeGridState(msg == "on");
     }
 
 
@@ -54,5 +55,17 @@ public class GridDrawer : MonoBehaviour
         lr.endWidth = 0.005f;
         lr.material = lineMaterial;
         lr.useWorldSpace = true;
+
+        _gridList.Add(lineObj);
+    }
+
+
+    // 해당 오브젝트 내부에 있는 그리드 오브젝트를 On/Off
+    private void ChangeGridState(bool state)
+    {
+        foreach (GameObject grid in _gridList)
+        {
+            grid.GetComponent<LineRenderer>().enabled = state;
+        }
     }
 }

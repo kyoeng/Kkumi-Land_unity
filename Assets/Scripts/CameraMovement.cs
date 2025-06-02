@@ -77,7 +77,7 @@ public class CameraMovement : MonoBehaviour
         float wheelInput = Input.GetAxis("Mouse ScrollWheel");
         if (wheelInput != 0)
         {
-            _applyDistance -= wheelInput * 5f;
+            _applyDistance -= wheelInput * _sensitivity * Time.deltaTime;
             _applyDistance = Mathf.Clamp(_applyDistance, _minDistance, _maxDistance);
         }
     }
